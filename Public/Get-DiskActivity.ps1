@@ -19,7 +19,7 @@ Function Get-DiskActivity {
   $PhysicalDisk_per_language = @{
     "es-ES"  = "\Disco físico(_Total)\Bytes de escritura en disco/s"
     "it-IT"  = "\Disco fisico(_Total)\Byte scritti su disco/sec"
-    "fr-FR"  = "\Disco fisico(_Total)\Byte scritti su disco/sec"
+    "fr-FR"  = "\Disque physique(_Total)\Écritures disque, octets/s"
     "pt-BR"  = "\PhysicalDisk(_Total)\Bytes de gravação de disco/s"
     "pt-PT"  = "\Disco físico(_Total)\Bytes escritos em disco/seg"
     "de-DE"  = "\Physikalischer Datenträger(_Total)\Bytes geschrieben/s"

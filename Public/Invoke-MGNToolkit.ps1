@@ -2,7 +2,7 @@
 .SYNOPSIS
     Run multiple checks for common tasks to help troubleshoot MGN issues.
 .DESCRIPTION
-    This is tha main function to go through checks related to MGN issues. Each check will be on a separate function. For more information visit - https://github.com/awslabs/aws-support-tools/tree/master/MGN/Windows
+    This is tha main function to go through checks related to MGN issues. Each check will be on a separate function. For more information visit - https://github.com/awslabs/mgn-toolkit
 .EXAMPLE
 	PS C:\> Invoke-MGNToolkit
 .INPUTS

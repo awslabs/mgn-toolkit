@@ -132,8 +132,8 @@ Disk Write Activity Maximum   [YELLOW]        The Max for Disk Write Activity wa
     #MGN-Toolkit
     $uri = 'https://github.com/awslabs/mgn-toolkit/archive/refs/heads/main.zip'
     $destination = (Get-Location).Path
-    if ((Test-Path -Path "$destination\mgn-toolkit.zip" -PathType Leaf) -or (Test-Path -Path "$destination\mgn-toolkit")) {
-        write-host "File $destination\mgn-toolkit.zip or folder $destination\mgn-toolkit found, exiting"
+    if ((Test-Path -Path "$destination\mgn-toolkit.zip" -PathType Leaf) -or (Test-Path -Path "$destination\mgn-toolkit-main")) {
+        write-host "File $destination\mgn-toolkit.zip or folder $destination\mgn-toolkit-main found, exiting"
     }else {
         Write-host "Enable TLS 1.2 for this PowerShell session only."
         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -142,9 +142,9 @@ Disk Write Activity Maximum   [YELLOW]        The Max for Disk Write Activity wa
         $webClient.DownloadFile($uri, "$destination\mgn-toolkit.zip")
         Write-host "mgn-toolkit.zip download successfully"
         Add-Type -Assembly "system.io.compression.filesystem"
-        [System.IO.Compression.ZipFile]::ExtractToDirectory("$destination\mgn-toolkit.zip","$destination\mgn-toolkit")
+        [System.IO.Compression.ZipFile]::ExtractToDirectory("$destination\mgn-toolkit.zip","$destination")
         Write-host "Extracting mgn-toolkit.zip complete successfully"
-        Import-Module "$destination\MGN-Toolkit.psm1"; Invoke-MGNToolkit
+        Import-Module "$destination\mgn-toolkit-main\MGN-Toolkit.psm1"; Invoke-MGNToolkit
     }
     ```
 

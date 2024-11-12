@@ -65,7 +65,6 @@ Function Get-DiskActivity {
 Average (Mbps) = $averageMbps Mbps
 Maximum (Mbits) = $maxMbits Mbps
 "@
-    Write-Log -Message  "To see each interval individually, please see $DiskActivityOutput\WriteBytes-$WriteOpsTimer-Seconds.txt (values are in Bytes)"
 
     $value = "[YELLOW]"
     $value2 = "[YELLOW]"
